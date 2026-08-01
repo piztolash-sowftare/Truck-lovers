@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --boo-purple: #6D28D9;
+    --boo-bg: #F8F7FF;
+    --boo-text: #1F2937;
+    --boo-card-bg: #FFFFFF;
+    --boo-accent: #8B5CF6;
+    --brand-gold: #FFD700;
+  }
+
+  body {
+    background-color: var(--boo-bg);
+    color: var(--boo-text);
+    font-family: 'Lexend', 'Inter', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+  }
+}
+
+.boo-card {
+  background: var(--boo-card-bg);
+  border-radius: 24px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+}
+
+.boo-input {
+  @apply bg-white border border-gray-200 rounded-2xl px-5 py-3 text-gray-800 focus:border-violet-500 focus:ring-4 focus:ring-violet-500/10 outline-none transition-all;
+}
+
+.btn-boo {
+  @apply bg-violet-600 text-white font-bold py-3 px-6 rounded-full transition-all active:scale-95 hover:bg-violet-700 shadow-md shadow-violet-200 flex items-center justify-center gap-2;
+}
+
+.btn-boo-outline {
+  @apply border-2 border-violet-600 text-violet-600 font-bold py-3 px-6 rounded-full transition-all active:scale-95 hover:bg-violet-50;
+}
+
+.online-dot {
+  @apply absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full;
+}
+
+.admin-badge {
+  @apply inline-flex items-center justify-center bg-yellow-400 text-yellow-900 font-black rounded-full shadow-sm;
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #E5E7EB;
+  border-radius: 10px;
+}
+
+.leaflet-container {
+  border-radius: 24px;
+}
+
+/* Animations like Boo */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
